@@ -11,13 +11,13 @@ public class UserRegistration {
 	public static void mobileNumberCheck() {
 
 		// Scanner class using to get the first name from the user.
-		System.out.print("Enter your password: ");
-		String psw = s.next();
+		System.out.print("Enter your E-Mail: ");
+		String Email = s.next();
 
 		// pattern class using to set pattern
-		Pattern p = Pattern.compile("^[A-Z]{1}[a-zA-Z0-9]{1,}[!@#$%^&]{1,}[a-zA-Z0-9]{1,}$");
+		Pattern p = Pattern.compile("^[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-z]{2,3}$");
 		// Matcher class
-		Matcher m = p.matcher(psw);
+		Matcher m = p.matcher(Email);
 		boolean result = m.matches();
 		if (result) {
 			System.out.println("Valid");

@@ -11,13 +11,13 @@ public class UserRegistration {
 	public static void nameCheck() {
 
 		// Scanner class using to get the first name from the user.
-		System.out.print("Enter your First name: ");
-		String First_Name = s.next();
+		System.out.print("Enter your Last name: ");
+		String Last_Name = s.next();
 
 		// pattern using
 		Pattern p = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
 
-		Matcher m = p.matcher(First_Name);
+		Matcher m = p.matcher(Last_Name);
 
 		if (m.matches()) {
 			System.out.println("Valid");

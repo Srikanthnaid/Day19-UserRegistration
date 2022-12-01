@@ -15,7 +15,7 @@ public class UserRegistration {
 		String psw = s.next();
 
 		// pattern class using to set pattern
-		Pattern p = Pattern.compile("^[A-Za-z0-9]{8}$");
+		Pattern p = Pattern.compile("^[A-Z]{1}[a-zA-Z0-9]{1,}[!@#$%^&]{1,}[a-zA-Z0-9]{1,}$");
 		// Matcher class
 		Matcher m = p.matcher(psw);
 		boolean result = m.matches();

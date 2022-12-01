@@ -8,16 +8,16 @@ public class UserRegistration {
 
 	static Scanner s = new Scanner(System.in);
 
-	public static void nameCheck() {
+	public static void emailCheck() {
 
 		// Scanner class using to get the first name from the user.
 		System.out.print("Enter your Last name: ");
-		String Last_Name = s.next();
+		String Email = s.next();
 
-		// pattern using
-		Pattern p = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
-
-		Matcher m = p.matcher(Last_Name);
+		// pattern class using to set pattern
+		Pattern p = Pattern.compile("^[a-zA-Z]+[.][A-Za-z]+@[a-zA-Z]+[.]+[a-zA-Z]{2}+[.][A-Za-z]{2}+$");
+		//Matcher class
+		Matcher m = p.matcher(Email);
 
 		if (m.matches()) {
 			System.out.println("Valid");
@@ -29,7 +29,7 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 
-		nameCheck();
+		emailCheck();
 	}
 
 }
